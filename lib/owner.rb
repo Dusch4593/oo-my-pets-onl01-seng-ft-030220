@@ -58,6 +58,9 @@ class Owner
   
   def sell_pets 
     all_pets = cats.concat(dogs)
-    all_pets.each{|pet| pet.mood = "nervous" }
+    all_pets.each{|pet| 
+      pet.mood = "nervous" 
+      pet.owner = nil
+    }
   end
 end
